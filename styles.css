@@ -7,7 +7,9 @@ body{
     align-items: center;
     margin: 0;
     padding: 0;
-    
+    background-image: url('https://source.unsplash.com/random?place');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .card{
     /* display: inline-block; */
@@ -40,6 +42,7 @@ input.search-bar {
     font-weight: 200;
 }
 button.search-btn{
+    color: #ffffff;
     border-radius: 20px;
     border: none;
     height: 40px;
@@ -66,4 +69,26 @@ hr{
     border:0;
     border-top: 1px solid white;
    width: 70%;
+}
+.description{
+    text-transform: capitalize;
+}
+.float{
+    display: flex;
+    /* align-self: center; */
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+}
+.float div:nth-child(2){
+    padding: 0 5%;
+}
+.container .loading{
+    visibility: hidden;
+}
+.container .loading::after{
+    visibility: visible;
+    content: "Loading...";
+    color: #ffffff;
 }

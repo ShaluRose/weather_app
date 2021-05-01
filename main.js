@@ -14,11 +14,13 @@ const weather = {
         const {icon, description} = data.weather[0];
         
         document.querySelector(".city").innerText = name;
-        document.querySelector(".temp").innerText = Math.round(temp);
+        document.querySelector(".temp").innerText = Math.round(temp)+"°C";
         document.querySelector(".icon").src="https://openweathermap.org/img/wn/"+icon+".png";
         document.querySelector(".description").innerText= description;
         document.querySelector(".feel").innerText="Feels like : "+feels_like+"°C";
+        document.querySelector(".container").classList.remove("loading");
         document.querySelector(".humidity").innerText = "Humidity : "+humidity+"%";
+        document.body.style.backgroundImage=url("'https://source.unsplash.com/random?'+name");
     },
     search: function() {
         this.fetchWeather(document.querySelector(".search-bar").value);
