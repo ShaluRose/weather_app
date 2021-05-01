@@ -7,7 +7,7 @@ body{
     align-items: center;
     margin: 0;
     padding: 0;
-    background-image: url('https://source.unsplash.com/random?place');
+    background-image: url('https://source.unsplash.com/random?weather');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -84,11 +84,15 @@ hr{
 .float div:nth-child(2){
     padding: 0 5%;
 }
-.container .loading{
+.container.wait{
     visibility: hidden;
+    height: 50px;
+    position: relative;
 }
-.container .loading::after{
+.container.wait:after{
     visibility: visible;
-    content: "Loading...";
-    color: #ffffff;
+    content: "Please wait...";
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
 }
